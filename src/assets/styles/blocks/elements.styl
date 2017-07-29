@@ -1,0 +1,83 @@
+.icon-search
+	sprite($s-search)
+
+.icon-camera
+	sprite($s-camera)
+
+.icon-ruby
+	sprite($s-ruby)
+
+.icon-next
+	display inline-block
+	sprite($s-next)
+
+.icon-pencil
+	display inline-block
+	sprite($s-pencil)
+
+.icon-image
+	display inline-block
+	sprite($s-image)
+
+.pager
+
+	li, a
+		display inline-block
+		font-size 17px
+		font-family Vollkorn
+		color #b3b3b3
+
+	a
+		padding 5px
+		line-height 8px
+		text-decoration none
+
+		&.active, &:hover
+			background $yellow
+			color $black
+
+.btn
+	display inline-block
+	position relative
+	text-decoration none
+	font-family Vollkorn
+	transition background .15s
+
+	&.yellow
+		background $yellow
+		color $black
+
+		&:hover
+			background $yellow-dark
+
+		&:active
+			top 1px
+
+	&.large
+		padding 12px 48px 8px
+		font-size 20px
+		line-height 40px
+
+	&.btn-icon
+		padding-left 100px
+
+	&.bookmark
+		&:before
+			content ''
+			display inline-block
+			position absolute
+			left 54px
+			top 14px
+			sprite($s-bookmark)
+
+@media (max-width 600px)
+	.btn
+		&.bookmark:before
+			left 14px
+
+		&.btn-icon
+			padding-left 60px
+
+		&.large
+			font-size 18px
+			padding-right 24px

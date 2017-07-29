@@ -1,0 +1,31 @@
+footer#footer
+  background #222222
+
+  .footer-social
+    text-align center
+    padding 24px 0
+
+    a.footer-social-link
+      display inline-block
+      margin-right 24px
+      color $white
+      font-size 14px
+      text-transform uppercase
+      font-family 'Proxima Nova'
+      font-weight 500
+      text-decoration none
+
+      &:before
+        content ''
+        display inline-block
+        position relative
+
+      &.fb:before
+        sprite($s-fb)
+        top 2px
+        margin-right 6px
+
+      &.instagram:before
+        sprite($s-instagram)
+        top 4px
+        margin-right 10px
