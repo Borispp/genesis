@@ -1009,6 +1009,7 @@ input[type='submit'] {
   resize: none;
   box-sizing: border-box;
   border: none;
+  border-radius: 0;
 }
 .input.white,
 .textarea.white {
