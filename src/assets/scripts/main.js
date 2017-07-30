@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  $('.services-slider').slick({
+  $('.services-slider, .photos-slider').slick({
     dots: true,
     autoplay: true,
     autoplaySpeed: 10000,
@@ -12,7 +12,7 @@ $(document).ready(function() {
     slidesToScroll: 1,
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 769,
         settings: {
           slidesToShow: 1
         }
