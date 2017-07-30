@@ -101,30 +101,6 @@
 		transform rotate(180deg) translate(0, -9px)
 		transform-origin top left
 
-	.slick-dots
-		li
-			margin 0 12px
-
-			&.slick-active
-				button
-					background $yellow-button
-
-		button
-			width 30px
-			height 30px
-			background #d0d0d0
-			border-radius 50%
-			transition background .15s
-
-			&:before
-				content ''
-
-			&:hover
-				background $yellow-button
-
-			&:active
-				background $yellow
-
 .team-slider
 	padding-top 10px
 	position relative
@@ -328,6 +304,34 @@
 			font-size 15px
 			line-height 18px
 			color $black
+
+.photos-slider
+	padding-bottom 30px
+
+.services-slider, .photos-slider
+	.slick-dots
+		li
+			margin 0 12px
+
+			&.slick-active
+				button
+					background $yellow-button
+
+		button
+			width 30px
+			height 30px
+			background #d0d0d0
+			border-radius 50%
+			transition background .15s
+
+			&:before
+				content '' !important
+
+			&:hover
+				background $yellow-button
+
+			&:active
+				background $yellow
 
 @media (max-width 992px)
 	.services-list
