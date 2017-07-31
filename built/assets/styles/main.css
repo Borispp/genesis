@@ -373,7 +373,8 @@ input[type='submit'] {
 .section .section-next .icon-next {
   position: absolute;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 .section-contact-form {
   padding: 20px 0 30px;
@@ -416,12 +417,18 @@ input[type='submit'] {
 .consulting-list {
   padding-top: 30px;
   font-size: 0;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-content: space-between;
-  align-items: flex-start;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  -ms-flex-align: start;
+      align-items: flex-start;
 }
 .consulting-list li {
   font-size: 14px;
@@ -521,8 +528,10 @@ input[type='submit'] {
 }
 .services-slider .slick-next {
   left: calc(50% + 200px);
-  transform: rotate(180deg) translate(0, -9px);
-  transform-origin: top left;
+  -webkit-transform: rotate(180deg) translate(0, -9px);
+          transform: rotate(180deg) translate(0, -9px);
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
 }
 .team-slider {
   padding-top: 10px;
@@ -536,15 +545,14 @@ input[type='submit'] {
   top: 0;
   left: 0;
   width: 30%;
-  height: 100%;
-  background: -moz-linear-gradient(left, #fff 0%, rgba(255,255,255,0.65) 58%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(left, #fff 0%, rgba(255,255,255,0.65) 58%, rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+  height: 100%; /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to right, #fff 0%, rgba(255,255,255,0.65) 58%, rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 .team-slider:after {
   left: auto;
   right: 0;
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 .team-slider .team-content {
   box-sizing: border-box;
@@ -597,7 +605,8 @@ input[type='submit'] {
   opacity: 1;
 }
 .team-slider .slick-next:before {
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 .team-slider .slick-prev {
   left: 30%;
@@ -656,7 +665,8 @@ input[type='submit'] {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 .photos-list li a .photos-list-suggestion {
   font-size: 17px;
@@ -799,7 +809,8 @@ input[type='submit'] {
     height: 150px;
   }
   .consulting-list {
-    justify-content: center;
+    -ms-flex-pack: center;
+        justify-content: center;
     padding-top: 10px;
     margin-bottom: -20px;
   }
@@ -844,8 +855,10 @@ input[type='submit'] {
     height: 50vw;
   }
   .photos-list li a .icon {
-    transform: scale(0.8) translate(-50%, -50%);
-    transform-origin: top left;
+    -webkit-transform: scale(0.8) translate(-50%, -50%);
+            transform: scale(0.8) translate(-50%, -50%);
+    -webkit-transform-origin: top left;
+            transform-origin: top left;
   }
   .photos-list li a .photos-list-suggestion {
     font-size: 15px;
@@ -882,6 +895,9 @@ input[type='submit'] {
   .photos-list li {
     width: 100%;
     height: 100vw;
+  }
+  .photos-list li [data-image] {
+    display: none;
   }
 }
 .contact-form {
@@ -1178,7 +1194,8 @@ input[type='submit'] {
   position: absolute;
   bottom: 120px;
   left: 50%;
-  transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
   text-align: center;
   padding: 0 15px;
   box-sizing: border-box;
@@ -1212,8 +1229,10 @@ input[type='submit'] {
     width: 150px;
   }
   #header .header-menu .header-menu-center .header-logo {
-    transform: scale(0.6);
-    transform-origin: top left;
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+    -webkit-transform-origin: top left;
+            transform-origin: top left;
   }
   #header .header-menu .header-menu-center .header-languages {
     margin-top: -36px;
@@ -1284,14 +1303,18 @@ input[type='submit'] {
   width: 100%;
   height: 100%;
   z-index: 9999;
-  transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
 }
 .popup.-hidePopup {
-  transform: translate(-150%, 0);
+  -webkit-transform: translate(-150%, 0);
+          transform: translate(-150%, 0);
 }
 .popup.-hidePopupTop {
-  transform: translate(0, -100%);
+  -webkit-transform: translate(0, -100%);
+          transform: translate(0, -100%);
 }
 div.clip {
   background: url("../images/content/sign_mask.png");
@@ -1301,7 +1324,8 @@ div.clip {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 div.clip.-login {
   background: url("../images/content/login_bg.png");
@@ -1376,7 +1400,8 @@ div.clip.-login .bigPopup .input_large input {
   padding: 42px 24px 18px;
 }
 div.clip.-login .bigPopup .input_large label {
-  transform: translate(24px, 14px);
+  -webkit-transform: translate(24px, 14px);
+          transform: translate(24px, 14px);
 }
 div.clip.-login .message {
   margin: 8px 0 -12px;
@@ -1452,7 +1477,9 @@ div.clip.-login .message {
   z-index: 9999;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(0);
+  -webkit-transform: translate(-50%, -50%) scale(0);
+          transform: translate(-50%, -50%) scale(0);
+  transition: -webkit-transform 0.2s;
   transition: transform 0.2s;
 }
 .imagePopup .close {
@@ -1471,11 +1498,12 @@ div.clip.-login .message {
   opacity: 1;
 }
 .imagePopup img {
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 100vw;
+  max-height: 100vw;
 }
 .imagePopup.-show {
-  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
 }
 footer#footer {
   background: #222;
